@@ -135,6 +135,8 @@ Public Class FormMemory
 
         If reponse = vbYes Then
             Me.Hide()
+            Chronometre.Stop()
+            MessageBox.Show("Temps écoulé ! C'est perdu, vous avez abandonné et trouvé " & compteurCarre & " carrés !")
             FormAccueil.Show()
         End If
     End Sub
@@ -150,21 +152,12 @@ Public Class FormMemory
         If tempsRestant = 0 Then
             Chronometre.Stop()
             MessageBox.Show("Temps écoulé ! C'est perdu, vous avez mis 60s à identifier " & compteurCarre & "carrés !")
-
-            End
+            Me.Hide()
+            FormAccueil.Show()
         End If
     End Sub
 
     Private Sub LabelJoueurP_Click(sender As Object, e As EventArgs) Handles LabelJoueurP.Click
 
     End Sub
-
-    Private Sub Label5_Click(sender As Object, e As EventArgs) Handles Label5.Click
-
-    End Sub
-
-    Private Sub Label10_Click(sender As Object, e As EventArgs) Handles Label10.Click
-
-    End Sub
 End Class
-

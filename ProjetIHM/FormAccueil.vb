@@ -36,4 +36,17 @@
         Dim stats As New FormStats()
         stats.Show()
     End Sub
+
+    Private Sub FormAccueil_Activated(sender As Object, e As EventArgs) Handles MyBase.Activated
+        ComboBoxPrenom.Items.Clear()
+        For Each j In ListeJoueurs
+            If Not ComboBoxPrenom.Items.Contains(j.nom) Then
+                ComboBoxPrenom.Items.Add(j.nom)
+            End If
+        Next
+    End Sub
+    Private Sub FormAccueil_FormClosing(sender As Object, e As FormClosingEventArgs) Handles MyBase.FormClosing
+        MsgBox("Sauvegarde en cours...")
+        SauvegarderJoueurs()
+    End Sub
 End Class

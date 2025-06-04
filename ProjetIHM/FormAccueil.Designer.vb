@@ -34,7 +34,7 @@ Partial Class FormAccueil
         ' 
         ComboBoxPrenom.FormattingEnabled = True
         ComboBoxPrenom.Location = New Point(268, 55)
-        ComboBoxPrenom.Margin = New Padding(6, 6, 6, 6)
+        ComboBoxPrenom.Margin = New Padding(6)
         ComboBoxPrenom.Name = "ComboBoxPrenom"
         ComboBoxPrenom.Size = New Size(221, 40)
         ComboBoxPrenom.TabIndex = 0
@@ -42,7 +42,7 @@ Partial Class FormAccueil
         ' BtnQuitter
         ' 
         BtnQuitter.Location = New Point(307, 411)
-        BtnQuitter.Margin = New Padding(6, 6, 6, 6)
+        BtnQuitter.Margin = New Padding(6)
         BtnQuitter.Name = "BtnQuitter"
         BtnQuitter.Size = New Size(158, 62)
         BtnQuitter.TabIndex = 2
@@ -52,7 +52,7 @@ Partial Class FormAccueil
         ' BtnJouer
         ' 
         BtnJouer.Location = New Point(307, 117)
-        BtnJouer.Margin = New Padding(6, 6, 6, 6)
+        BtnJouer.Margin = New Padding(6)
         BtnJouer.Name = "BtnJouer"
         BtnJouer.Size = New Size(158, 62)
         BtnJouer.TabIndex = 3
@@ -72,7 +72,7 @@ Partial Class FormAccueil
         ' BtnOption
         ' 
         BtnOption.Location = New Point(307, 215)
-        BtnOption.Margin = New Padding(6, 6, 6, 6)
+        BtnOption.Margin = New Padding(6)
         BtnOption.Name = "BtnOption"
         BtnOption.Size = New Size(158, 62)
         BtnOption.TabIndex = 5
@@ -82,7 +82,7 @@ Partial Class FormAccueil
         ' BtnScore
         ' 
         BtnScore.Location = New Point(307, 315)
-        BtnScore.Margin = New Padding(6, 6, 6, 6)
+        BtnScore.Margin = New Padding(6)
         BtnScore.Name = "BtnScore"
         BtnScore.Size = New Size(158, 62)
         BtnScore.TabIndex = 6
@@ -100,7 +100,7 @@ Partial Class FormAccueil
         Controls.Add(BtnJouer)
         Controls.Add(BtnQuitter)
         Controls.Add(ComboBoxPrenom)
-        Margin = New Padding(6, 6, 6, 6)
+        Margin = New Padding(6)
         Name = "FormAccueil"
         Text = "Memory"
         ResumeLayout(False)

@@ -9,11 +9,11 @@ Public Class Joueur
 End Class
 
 Public Module Module1
-    ' Liste partagée par toute l'application
+
     Public ListeJoueurs As New List(Of Joueur)
 
     Public Sub ChargerJoueurs()
-        Dim chemin As String = "donnees\joueurs.txt"
+        Dim chemin As String = Path.Combine(Application.StartupPath, "donnees\joueurs.txt")
         If File.Exists(chemin) Then
             ListeJoueurs.Clear()
             Using sr As New StreamReader(chemin)
@@ -31,15 +31,47 @@ Public Module Module1
                     End If
                 End While
             End Using
+        Else
+            MsgBox("Fichier non trouvé : " & chemin)
         End If
     End Sub
 
     Public Sub SauvegarderJoueurs()
-        Dim chemin As String = "donnees\joueurs.txt"
-        Using sw As New StreamWriter(chemin, False)
-            For Each j In ListeJoueurs
-                sw.WriteLine(j.nom & ";" & j.meilleurScore & ";" & j.tempsMin & ";" & j.nbParties & ";" & j.tempsTotal)
-            Next
-        End Using
+        Try
+            Dim chemin As String = Path.Combine(Application.StartupPath, "donnees\joueurs.txt")
+            MsgBox("Sauvegarde vers : " & chemin)
+            Using sw As New StreamWriter(chemin, False)
+                For Each j In ListeJoueurs
+                    sw.WriteLine(j.nom & ";" & j.meilleurScore & ";" & j.tempsMin & ";" & j.nbParties & ";" & j.tempsTotal)
+                Next
+            End Using
+            MsgBox("Sauvegarde terminée")
+        Catch ex As Exception
+            MsgBox("Erreur lors de la sauvegarde : " & ex.Message)
+        End Try
     End Sub
+
+    Public Sub MettreAJourStats(nom As String, nbCarres As Integer, temps As Integer)
+        Dim joueur = ListeJoueurs.Find(Function(j) j.nom = nom)
+
+        If joueur IsNot Nothing Then
+            If nbCarres > joueur.meilleurScore Then
+                joueur.meilleurScore = nbCarres
+                joueur.tempsMin = temps
+            ElseIf nbCarres = joueur.meilleurScore AndAlso temps < joueur.tempsMin Then
+                joueur.tempsMin = temps
+            End If
+            joueur.nbParties += 1
+            joueur.tempsTotal += temps
+        Else
+            Dim nouveauJoueur As New Joueur
+            nouveauJoueur.nom = nom
+            nouveauJoueur.meilleurScore = nbCarres
+            nouveauJoueur.tempsMin = temps
+            nouveauJoueur.nbParties = 1
+            nouveauJoueur.tempsTotal = temps
+            ListeJoueurs.Add(nouveauJoueur)
+        End If
+    End Sub
+
 End Module

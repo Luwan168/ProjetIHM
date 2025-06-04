@@ -91,6 +91,11 @@ Public Class FormMemory
                     Chronometre.Stop()
                     tempsEcoule = 60 - tempsRestant
                     MessageBox.Show("Bravo ! Vous avez trouvé les 5 carrés en " & tempsEcoule & " secondes.")
+
+                    ' ⬇️ ENREGISTREMENT DU SCORE
+                    MettreAJourStats(LabelJoueurP.Text, compteurCarre, tempsEcoule)
+                    SauvegarderJoueurs()
+
                     FormAccueil.Show()
                     Me.Hide()
                 End If
@@ -136,7 +141,13 @@ Public Class FormMemory
         If reponse = vbYes Then
             Me.Hide()
             Chronometre.Stop()
-            MessageBox.Show("Temps écoulé ! C'est perdu, vous avez abandonné et trouvé " & compteurCarre & " carrés !")
+            MessageBox.Show("vous avez abandonné et trouvé " & compteurCarre & " carrés !")
+
+            ' ⬇️ ENREGISTREMENT DU SCORE
+            tempsEcoule = 60 - tempsRestant
+            MettreAJourStats(LabelJoueurP.Text, compteurCarre, tempsEcoule)
+            SauvegarderJoueurs()
+
             FormAccueil.Show()
         End If
     End Sub
@@ -151,13 +162,16 @@ Public Class FormMemory
         ' Fin de partie
         If tempsRestant = 0 Then
             Chronometre.Stop()
-            MessageBox.Show("Temps écoulé ! C'est perdu, vous avez mis 60s à identifier " & compteurCarre & "carrés !")
+            MessageBox.Show("Temps écoulé ! C'est perdu, vous avez mis 60s à identifier " & compteurCarre & " carrés !")
+
+            ' ⬇️ ENREGISTREMENT DU SCORE
+            MettreAJourStats(LabelJoueurP.Text, compteurCarre, 60)
+            SauvegarderJoueurs()
+
             Me.Hide()
             FormAccueil.Show()
         End If
     End Sub
 
-    Private Sub LabelJoueurP_Click(sender As Object, e As EventArgs) Handles LabelJoueurP.Click
-
-    End Sub
 End Class
+

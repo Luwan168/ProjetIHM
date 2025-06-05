@@ -7,21 +7,7 @@
             ComboBoxPrenom.Items.Add(j.nom)
         Next
 
-        If theme = "sombre" Then
-            Me.BackColor = Color.Black
-            Me.ForeColor = Color.White
-            For Each ctrl As Control In Me.Controls
-                ctrl.BackColor = Color.Black
-                ctrl.ForeColor = Color.White
-            Next
-        Else
-            Me.BackColor = SystemColors.Control
-            Me.ForeColor = Color.Black
-            For Each ctrl As Control In Me.Controls
-                ctrl.BackColor = SystemColors.Control
-                ctrl.ForeColor = Color.Black
-            Next
-        End If
+
     End Sub
 
     Private Sub ComboBox1_SelectedIndexChanged(sender As Object, e As EventArgs) Handles ComboBoxPrenom.TextChanged
@@ -60,6 +46,21 @@
                 ComboBoxPrenom.Items.Add(j.nom)
             End If
         Next
+        If theme = "sombre" Then
+            Me.BackColor = Color.Black
+            Me.ForeColor = Color.White
+            For Each ctrl As Control In Me.Controls
+                ctrl.BackColor = Color.Black
+                ctrl.ForeColor = Color.White
+            Next
+        Else
+            Me.BackColor = SystemColors.Control
+            Me.ForeColor = Color.Black
+            For Each ctrl As Control In Me.Controls
+                ctrl.BackColor = SystemColors.Control
+                ctrl.ForeColor = Color.Black
+            Next
+        End If
     End Sub
     Private Sub FormAccueil_FormClosing(sender As Object, e As FormClosingEventArgs) Handles MyBase.FormClosing
         MsgBox("Sauvegarde en cours...")

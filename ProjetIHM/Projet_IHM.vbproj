@@ -36,17 +36,10 @@
   </ItemGroup>
 
   <ItemGroup>
-    <None Update="donnees\joueurs.txt">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
     <None Update="My Project\Application.myapp">
       <Generator>MyApplicationCodeGenerator</Generator>
       <LastGenOutput>Application.Designer.vb</LastGenOutput>
     </None>
-  </ItemGroup>
-
-  <ItemGroup>
-    <Folder Include="donnees\" />
   </ItemGroup>
 
 </Project>

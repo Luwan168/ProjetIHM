@@ -12,6 +12,30 @@ Public Module Module1
 
     Public ListeJoueurs As New List(Of Joueur)
 
+    Public Sub SauvegarderJoueurs()
+        Try
+            ' Crée le dossier si nécessaire
+            Dim dossier As String = Path.Combine(Application.StartupPath, "donnees")
+            If Not Directory.Exists(dossier) Then
+                Directory.CreateDirectory(dossier)
+            End If
+
+            ' Chemin du fichier à créer
+            Dim chemin As String = Path.Combine(dossier, "joueurs.txt")
+            MsgBox("Sauvegarde vers : " & chemin)
+
+            Using sw As New StreamWriter(chemin, False)
+                For Each j In ListeJoueurs
+                    sw.WriteLine(j.nom & ";" & j.meilleurScore & ";" & j.tempsMin & ";" & j.nbParties & ";" & j.tempsTotal)
+                Next
+            End Using
+
+            MsgBox("Sauvegarde terminée avec succès.")
+        Catch ex As Exception
+            MsgBox("Erreur lors de la sauvegarde : " & ex.Message)
+        End Try
+    End Sub
+
     Public Sub ChargerJoueurs()
         Dim chemin As String = Path.Combine(Application.StartupPath, "donnees\joueurs.txt")
         If File.Exists(chemin) Then
@@ -32,23 +56,8 @@ Public Module Module1
                 End While
             End Using
         Else
-            MsgBox("Fichier non trouvé : " & chemin)
+            MsgBox("Fichier non trouvé à : " & chemin)
         End If
-    End Sub
-
-    Public Sub SauvegarderJoueurs()
-        Try
-            Dim chemin As String = Path.Combine(Application.StartupPath, "donnees\joueurs.txt")
-            MsgBox("Sauvegarde vers : " & chemin)
-            Using sw As New StreamWriter(chemin, False)
-                For Each j In ListeJoueurs
-                    sw.WriteLine(j.nom & ";" & j.meilleurScore & ";" & j.tempsMin & ";" & j.nbParties & ";" & j.tempsTotal)
-                Next
-            End Using
-            MsgBox("Sauvegarde terminée")
-        Catch ex As Exception
-            MsgBox("Erreur lors de la sauvegarde : " & ex.Message)
-        End Try
     End Sub
 
     Public Sub MettreAJourStats(nom As String, nbCarres As Integer, temps As Integer)

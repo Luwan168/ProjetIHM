@@ -12,6 +12,11 @@ Public Module Module1
 
     Public ListeJoueurs As New List(Of Joueur)
 
+    ' Options temporaires du jeu
+    Public theme As String = "clair"
+    Public tempsLimite As Integer = 60
+    Public dosCarte As String = "Dos1.png"
+
     Public Sub SauvegarderJoueurs()
         Try
             ' Crée le dossier si nécessaire
@@ -22,15 +27,12 @@ Public Module Module1
 
             ' Chemin du fichier à créer
             Dim chemin As String = Path.Combine(dossier, "joueurs.txt")
-            MsgBox("Sauvegarde vers : " & chemin)
 
             Using sw As New StreamWriter(chemin, False)
                 For Each j In ListeJoueurs
                     sw.WriteLine(j.nom & ";" & j.meilleurScore & ";" & j.tempsMin & ";" & j.nbParties & ";" & j.tempsTotal)
                 Next
             End Using
-
-            MsgBox("Sauvegarde terminée avec succès.")
         Catch ex As Exception
             MsgBox("Erreur lors de la sauvegarde : " & ex.Message)
         End Try

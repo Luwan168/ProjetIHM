@@ -3,7 +3,7 @@
 Imports System.IO
 
 Public Class FormMemory
-    Private tempsRestant As Integer = 60
+    Private tempsRestant As Integer = tempsLimite
     Private tempsEcoule As Integer
     Private compteurCarre As Integer = 0
     Private Cartes As New List(Of Label)
@@ -31,17 +31,31 @@ Public Class FormMemory
         Cartes = labels.ToList()
 
         For i As Integer = 0 To labels.Length - 1
-            ' On met le dos des cartes
-            labels(i).Image = Image.FromFile("Images\ImgBackCard.png")
+            labels(i).Image = Image.FromFile("Images\\" & dosCarte)
         Next
         ' On initialise les cartes du jeu
 
-        For i As Integer = 1 To 5
-            For j As Integer = 1 To 4
-                listeCartes.Add("card" & i & ".png") ' card1.png, ..., card5.png
+        listeCartes.Clear()
 
+        If dosCarte = "Dos1.png" Then
+            For i As Integer = 1 To 5
+                For j As Integer = 1 To 4
+                    listeCartes.Add("card" & i & ".png")
+                Next
             Next
-        Next
+        ElseIf dosCarte = "Dos2.png" Then
+            For i As Integer = 1 To 5
+                For j As Integer = 1 To 4
+                    listeCartes.Add("perso" & i & ".png")
+                Next
+            Next
+        ElseIf dosCarte = "Dos3.png" Then
+            For i As Integer = 1 To 5
+                For j As Integer = 1 To 4
+                    listeCartes.Add("uno" & i & ".png") ' Exemple
+                Next
+            Next
+        End If
 
         ' Mélange des cartes
         Dim rand As New Random()
@@ -52,6 +66,22 @@ Public Class FormMemory
             AddHandler labels(i).Click, AddressOf RetournerCarteFace
         Next
 
+
+        If theme = "sombre" Then
+            Me.BackColor = Color.Black
+            Me.ForeColor = Color.White
+            For Each ctrl As Control In Me.Controls
+                ctrl.BackColor = Color.Black
+                ctrl.ForeColor = Color.White
+            Next
+        Else
+            Me.BackColor = SystemColors.Control
+            Me.ForeColor = Color.Black
+            For Each ctrl As Control In Me.Controls
+                ctrl.BackColor = SystemColors.Control
+                ctrl.ForeColor = Color.Black
+            Next
+        End If
     End Sub
 
     Private Sub RetournerCarteFace(sender As Object, e As EventArgs)
@@ -118,7 +148,7 @@ Public Class FormMemory
 
         ' Remettre les cartes face cachée
         For Each lbl In listeCartesRetournees
-            lbl.Image = Image.FromFile("Images\ImgBackCard.png")
+            lbl.Image = Image.FromFile("Images\\" & dosCarte)
         Next
 
         ' Réactiver uniquement les labels encore actifs

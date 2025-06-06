@@ -63,7 +63,6 @@
         End If
     End Sub
     Private Sub FormAccueil_FormClosing(sender As Object, e As FormClosingEventArgs) Handles MyBase.FormClosing
-        MsgBox("Sauvegarde en cours...")
         SauvegarderJoueurs()
     End Sub
 

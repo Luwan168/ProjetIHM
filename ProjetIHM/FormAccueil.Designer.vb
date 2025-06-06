@@ -33,7 +33,7 @@ Partial Class FormAccueil
         ' ComboBoxPrenom
         ' 
         ComboBoxPrenom.FormattingEnabled = True
-        ComboBoxPrenom.Location = New Point(268, 55)
+        ComboBoxPrenom.Location = New Point(281, 52)
         ComboBoxPrenom.Margin = New Padding(6)
         ComboBoxPrenom.Name = "ComboBoxPrenom"
         ComboBoxPrenom.Size = New Size(221, 40)
@@ -41,7 +41,7 @@ Partial Class FormAccueil
         ' 
         ' BtnQuitter
         ' 
-        BtnQuitter.Location = New Point(307, 411)
+        BtnQuitter.Location = New Point(201, 418)
         BtnQuitter.Margin = New Padding(6)
         BtnQuitter.Name = "BtnQuitter"
         BtnQuitter.Size = New Size(158, 62)
@@ -51,7 +51,7 @@ Partial Class FormAccueil
         ' 
         ' BtnJouer
         ' 
-        BtnJouer.Location = New Point(307, 117)
+        BtnJouer.Location = New Point(201, 124)
         BtnJouer.Margin = New Padding(6)
         BtnJouer.Name = "BtnJouer"
         BtnJouer.Size = New Size(158, 62)
@@ -71,7 +71,7 @@ Partial Class FormAccueil
         ' 
         ' BtnOption
         ' 
-        BtnOption.Location = New Point(307, 215)
+        BtnOption.Location = New Point(201, 222)
         BtnOption.Margin = New Padding(6)
         BtnOption.Name = "BtnOption"
         BtnOption.Size = New Size(158, 62)
@@ -81,7 +81,7 @@ Partial Class FormAccueil
         ' 
         ' BtnScore
         ' 
-        BtnScore.Location = New Point(307, 315)
+        BtnScore.Location = New Point(201, 322)
         BtnScore.Margin = New Padding(6)
         BtnScore.Name = "BtnScore"
         BtnScore.Size = New Size(158, 62)
@@ -93,7 +93,7 @@ Partial Class FormAccueil
         ' 
         AutoScaleDimensions = New SizeF(13.0F, 32.0F)
         AutoScaleMode = AutoScaleMode.Font
-        ClientSize = New Size(600, 521)
+        ClientSize = New Size(554, 532)
         Controls.Add(BtnScore)
         Controls.Add(BtnOption)
         Controls.Add(LabelPrenom)

@@ -41,7 +41,7 @@ Partial Class FormStats
         ' 
         ' BtnTri
         ' 
-        BtnTri.Location = New Point(58, 465)
+        BtnTri.Location = New Point(35, 441)
         BtnTri.Name = "BtnTri"
         BtnTri.Size = New Size(150, 46)
         BtnTri.TabIndex = 0
@@ -50,17 +50,16 @@ Partial Class FormStats
         ' 
         ' Label1
         ' 
-        Label1.AutoSize = True
-        Label1.Location = New Point(426, 56)
+        Label1.Location = New Point(351, 31)
         Label1.Name = "Label1"
-        Label1.Size = New Size(201, 32)
+        Label1.Size = New Size(218, 49)
         Label1.TabIndex = 5
         Label1.Text = "Statistique joueur"
         ' 
         ' LabelNom
         ' 
         LabelNom.AutoSize = True
-        LabelNom.Location = New Point(39, 226)
+        LabelNom.Location = New Point(77, 101)
         LabelNom.Name = "LabelNom"
         LabelNom.Size = New Size(67, 32)
         LabelNom.TabIndex = 6
@@ -69,7 +68,7 @@ Partial Class FormStats
         ' LabelScore
         ' 
         LabelScore.AutoSize = True
-        LabelScore.Location = New Point(222, 226)
+        LabelScore.Location = New Point(244, 101)
         LabelScore.Name = "LabelScore"
         LabelScore.Size = New Size(73, 32)
         LabelScore.TabIndex = 7
@@ -78,16 +77,16 @@ Partial Class FormStats
         ' LabelTemps
         ' 
         LabelTemps.AutoSize = True
-        LabelTemps.Location = New Point(414, 226)
+        LabelTemps.Location = New Point(419, 101)
         LabelTemps.Name = "LabelTemps"
-        LabelTemps.Size = New Size(80, 32)
+        LabelTemps.Size = New Size(83, 32)
         LabelTemps.TabIndex = 8
-        LabelTemps.Text = "temps"
+        LabelTemps.Text = "Temps"
         ' 
         ' LabelParties
         ' 
         LabelParties.AutoSize = True
-        LabelParties.Location = New Point(614, 226)
+        LabelParties.Location = New Point(559, 101)
         LabelParties.Name = "LabelParties"
         LabelParties.Size = New Size(122, 32)
         LabelParties.TabIndex = 9
@@ -96,15 +95,15 @@ Partial Class FormStats
         ' LabelTotal
         ' 
         LabelTotal.AutoSize = True
-        LabelTotal.Location = New Point(812, 226)
+        LabelTotal.Location = New Point(724, 101)
         LabelTotal.Name = "LabelTotal"
-        LabelTotal.Size = New Size(62, 32)
+        LabelTotal.Size = New Size(138, 32)
         LabelTotal.TabIndex = 10
-        LabelTotal.Text = "total"
+        LabelTotal.Text = "Temps total"
         ' 
         ' BtnFermer
         ' 
-        BtnFermer.Location = New Point(735, 465)
+        BtnFermer.Location = New Point(724, 447)
         BtnFermer.Name = "BtnFermer"
         BtnFermer.Size = New Size(150, 46)
         BtnFermer.TabIndex = 11
@@ -113,7 +112,7 @@ Partial Class FormStats
         ' 
         ' BtnAfficher
         ' 
-        BtnAfficher.Location = New Point(528, 465)
+        BtnAfficher.Location = New Point(550, 447)
         BtnAfficher.Name = "BtnAfficher"
         BtnAfficher.Size = New Size(150, 46)
         BtnAfficher.TabIndex = 12
@@ -123,56 +122,56 @@ Partial Class FormStats
         ' ComboBoxRecherche
         ' 
         ComboBoxRecherche.FormattingEnabled = True
-        ComboBoxRecherche.Location = New Point(242, 465)
+        ComboBoxRecherche.Location = New Point(208, 447)
         ComboBoxRecherche.Name = "ComboBoxRecherche"
-        ComboBoxRecherche.Size = New Size(242, 40)
+        ComboBoxRecherche.Size = New Size(319, 40)
         ComboBoxRecherche.TabIndex = 13
         ' 
         ' ListBoxNom
         ' 
         ListBoxNom.FormattingEnabled = True
-        ListBoxNom.Location = New Point(23, 270)
+        ListBoxNom.Location = New Point(37, 136)
         ListBoxNom.Name = "ListBoxNom"
-        ListBoxNom.Size = New Size(148, 164)
+        ListBoxNom.Size = New Size(148, 260)
         ListBoxNom.TabIndex = 15
         ' 
         ' ListBoxScore
         ' 
         ListBoxScore.FormattingEnabled = True
-        ListBoxScore.Location = New Point(194, 270)
+        ListBoxScore.Location = New Point(208, 136)
         ListBoxScore.Name = "ListBoxScore"
-        ListBoxScore.Size = New Size(148, 164)
+        ListBoxScore.Size = New Size(148, 260)
         ListBoxScore.TabIndex = 16
         ' 
         ' ListBoxTempsMin
         ' 
         ListBoxTempsMin.FormattingEnabled = True
-        ListBoxTempsMin.Location = New Point(396, 270)
+        ListBoxTempsMin.Location = New Point(379, 136)
         ListBoxTempsMin.Name = "ListBoxTempsMin"
-        ListBoxTempsMin.Size = New Size(148, 164)
+        ListBoxTempsMin.Size = New Size(148, 260)
         ListBoxTempsMin.TabIndex = 17
         ' 
         ' ListBoxNbParties
         ' 
         ListBoxNbParties.FormattingEnabled = True
-        ListBoxNbParties.Location = New Point(592, 270)
+        ListBoxNbParties.Location = New Point(550, 136)
         ListBoxNbParties.Name = "ListBoxNbParties"
-        ListBoxNbParties.Size = New Size(148, 164)
+        ListBoxNbParties.Size = New Size(148, 260)
         ListBoxNbParties.TabIndex = 18
         ' 
         ' ListBoxTempsTotal
         ' 
         ListBoxTempsTotal.FormattingEnabled = True
-        ListBoxTempsTotal.Location = New Point(789, 270)
+        ListBoxTempsTotal.Location = New Point(724, 136)
         ListBoxTempsTotal.Name = "ListBoxTempsTotal"
-        ListBoxTempsTotal.Size = New Size(148, 164)
+        ListBoxTempsTotal.Size = New Size(148, 260)
         ListBoxTempsTotal.TabIndex = 19
         ' 
-        ' Form1
+        ' FormStats
         ' 
         AutoScaleDimensions = New SizeF(13F, 32F)
         AutoScaleMode = AutoScaleMode.Font
-        ClientSize = New Size(1000, 582)
+        ClientSize = New Size(917, 535)
         Controls.Add(ListBoxTempsTotal)
         Controls.Add(ListBoxNbParties)
         Controls.Add(ListBoxTempsMin)
@@ -188,7 +187,7 @@ Partial Class FormStats
         Controls.Add(LabelNom)
         Controls.Add(Label1)
         Controls.Add(BtnTri)
-        Name = "Form1"
+        Name = "FormStats"
         Text = "Form1"
         ResumeLayout(False)
         PerformLayout()

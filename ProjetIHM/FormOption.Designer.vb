@@ -41,7 +41,7 @@ Partial Class FormOption
         ' 
         ' BtnValider
         ' 
-        BtnValider.Location = New Point(262, 646)
+        BtnValider.Location = New Point(429, 386)
         BtnValider.Name = "BtnValider"
         BtnValider.Size = New Size(150, 46)
         BtnValider.TabIndex = 0
@@ -50,7 +50,7 @@ Partial Class FormOption
         ' 
         ' BtnAnnuler
         ' 
-        BtnAnnuler.Location = New Point(524, 646)
+        BtnAnnuler.Location = New Point(237, 386)
         BtnAnnuler.Name = "BtnAnnuler"
         BtnAnnuler.Size = New Size(150, 46)
         BtnAnnuler.TabIndex = 1
@@ -60,7 +60,7 @@ Partial Class FormOption
         ' LabelTemps
         ' 
         LabelTemps.AutoSize = True
-        LabelTemps.Location = New Point(52, 302)
+        LabelTemps.Location = New Point(42, 317)
         LabelTemps.Name = "LabelTemps"
         LabelTemps.Size = New Size(329, 32)
         LabelTemps.TabIndex = 2
@@ -72,7 +72,7 @@ Partial Class FormOption
         GroupBoxTheme.Controls.Add(RadioSombre)
         GroupBoxTheme.Location = New Point(42, 38)
         GroupBoxTheme.Name = "GroupBoxTheme"
-        GroupBoxTheme.Size = New Size(400, 200)
+        GroupBoxTheme.Size = New Size(295, 200)
         GroupBoxTheme.TabIndex = 4
         GroupBoxTheme.TabStop = False
         GroupBoxTheme.Text = "Theme de l application"
@@ -104,9 +104,9 @@ Partial Class FormOption
         GroupBoxDos.Controls.Add(RadioDos1)
         GroupBoxDos.Controls.Add(RadioDos2)
         GroupBoxDos.Controls.Add(RadioDos3)
-        GroupBoxDos.Location = New Point(42, 381)
+        GroupBoxDos.Location = New Point(370, 38)
         GroupBoxDos.Name = "GroupBoxDos"
-        GroupBoxDos.Size = New Size(400, 200)
+        GroupBoxDos.Size = New Size(207, 200)
         GroupBoxDos.TabIndex = 4
         GroupBoxDos.TabStop = False
         GroupBoxDos.Text = "Cartes"
@@ -125,7 +125,7 @@ Partial Class FormOption
         ' RadioDos2
         ' 
         RadioDos2.AutoSize = True
-        RadioDos2.Location = New Point(32, 101)
+        RadioDos2.Location = New Point(32, 90)
         RadioDos2.Name = "RadioDos2"
         RadioDos2.Size = New Size(125, 36)
         RadioDos2.TabIndex = 8
@@ -136,7 +136,7 @@ Partial Class FormOption
         ' RadioDos3
         ' 
         RadioDos3.AutoSize = True
-        RadioDos3.Location = New Point(32, 158)
+        RadioDos3.Location = New Point(32, 132)
         RadioDos3.Name = "RadioDos3"
         RadioDos3.Size = New Size(125, 36)
         RadioDos3.TabIndex = 9
@@ -147,14 +147,14 @@ Partial Class FormOption
         ' ComboTemps
         ' 
         ComboTemps.FormattingEnabled = True
-        ComboTemps.Location = New Point(448, 302)
+        ComboTemps.Location = New Point(403, 309)
         ComboTemps.Name = "ComboTemps"
         ComboTemps.Size = New Size(242, 40)
         ComboTemps.TabIndex = 5
         ' 
         ' PicturePreview
         ' 
-        PicturePreview.Location = New Point(503, 394)
+        PicturePreview.Location = New Point(610, 38)
         PicturePreview.Name = "PicturePreview"
         PicturePreview.Size = New Size(187, 234)
         PicturePreview.TabIndex = 6
@@ -164,7 +164,7 @@ Partial Class FormOption
         ' 
         AutoScaleDimensions = New SizeF(13F, 32F)
         AutoScaleMode = AutoScaleMode.Font
-        ClientSize = New Size(785, 804)
+        ClientSize = New Size(903, 466)
         Controls.Add(PicturePreview)
         Controls.Add(ComboTemps)
         Controls.Add(GroupBoxDos)
